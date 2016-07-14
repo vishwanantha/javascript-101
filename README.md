@@ -63,6 +63,59 @@ if (condition === "something"){
 } //does not need semi-colon
 
 ```
+####Lesson 1.a: Running In web page
+###Getting started
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var first = function() {
+    console.log('hello');
+	alert('hello');
+};
+
+first();
+
+</script> 
+
+</body>
+</html>
+
+####Lesson 1.b: Firebug
+###Getting started
+Firebug is a free and open-source web browser extension for Mozilla Firefox that facilitates the live debugging, editing, and monitoring of any website's CSS, HTML, DOM, XHR, and JavaScript.
+
+===================================
+
+#save the below code in somesample.js
+
+var first = function() {
+    console.log('hello');
+	alert('hello');
+};
+
+==================
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<script src="somesample.js">
+</script>
+
+<script>
+first();
+</script> 
+</body>
+</html>
+
+
+
+```
 
 ####Lesson 2: Operators
 ###Basic Operators
