@@ -2,46 +2,50 @@
 #Beginner:
 
 ####Lesson 1: JavaScript Basics
-Overview
-
+##Overview
+```
 JavaScript, a rich and expressive language in its own right. 
-
+```
 This section covers the basic concepts of JavaScript, as well as some frequent pitfalls
  for people who have not used JavaScript before. While it will be of particular value 
  to people with no programming experience, even people who have used other programming 
  languages may benefit from learning about some of the peculiarities of JavaScript.
 
+ ```
 If you're interested in learning more about the JavaScript language, I highly recommend 
 JavaScript: The Good Parts by Douglas Crockford.
-Syntax Basics
+```
+
+##Syntax Basics
 
 Understanding statements, variable naming, whitespace, and other basic JavaScript syntax.
 
 A simple variable declaration
 
+```
 var first = 'hello world';
-
+```
 Whitespace has no meaning outside of quotation marks
-
+```
 var first =         'hello world';
-
-Expressions 
+```
+##Expressions 
 Parentheses indicate precedence
-
+```
 2 * 3 + 5;    // returns 11; multiplication happens first
 2 * (3 + 5);  // returns 16; addition happens first
-
+```
 Tabs enhance readability, but have no special meaning
-
+```
 var first = function() {
     console.log('hello');
 };
-
+```
 
 
 Comments: Used to leave notes within the code but is not included as part of the 
 instructions for the computer to execute.
-
+```
 // single line comment
 
 /* Comments that
@@ -58,69 +62,74 @@ if (condition === "something"){
 
 } //does not need semi-colon
 
+```
 
 ####Lesson 2: Operators
-Basic Operators
+###Basic Operators
 
 Basic operators allow you to manipulate values.
 
-Concatenation
+##Concatenation
 
+```
 var first = 'hello';
 var bar = 'world';
 
 console.log(first + ' ' + bar); // 'hello world'
+```
 
-Multiplication and division
+##Multiplication and division
 
+```
 2 * 3;
 2 / 3;
+```
 
-Incrementing and decrementing
-
+##Incrementing and decrementing
+```
 var i = 1;
 
 var j = ++i;  // pre-increment:  j equals 2; i equals 2
 var k = i++;  // post-increment: k equals 2; i equals 3
-
-Operations on Numbers & Strings
+```
+##Operations on Numbers & Strings
 
 In JavaScript, numbers and strings will occasionally behave in ways you might not expect.
 
-Addition vs. concatenation
-
+##Addition vs. concatenation
+```
 var first = 1;
 var bar = '2';
 
 console.log(first + bar);  // 12. uh oh
-
+```
 Forcing a string to act as a number
-
+```
 var first = 1;
 var bar = '2';
 
 // coerce the string to a number
 console.log(first + Number(bar));
-
+```
 The Number constructor, when called as a function (like above) will have the effect of 
 casting its argument into a number. You could also use the unary plus operator, which does the same thing:
 
 Forcing a string to act as a number (using the unary-plus operator)
-
-console.log(first + +bar);
-
+```
+#console.log(first + +bar);
+```
 
 
 
 
 ####Lesson 3: Operators Cont..
 
-Logical Operators
+##Logical Operators
 
 Logical operators allow you to evaluate a series of operands using AND and OR operations.
 
 Logical AND and OR operators
-
+```
 var first = 1;
 var bar = 0;
 var baz = 2;
@@ -131,7 +140,7 @@ bar || first;   // returns 1, which is true
 first && bar;   // returns 0, which is false
 first && baz;   // returns 2, which is true
 baz && first;   // returns 1, which is true
-
+```
 Though it may not be clear from the example, the || operator returns the value of the 
 first truthy operand, or, in cases where neither operand is truthy, it'll return the 
 last of both operands. The && operator returns the value of the first false operand, 
@@ -143,7 +152,7 @@ Note
 
 You'll sometimes see developers use these logical operators for flow control instead of 
 using if statements. For example:
-
+```
 // do something with first if first is truthy
 first && doSomething(first);
 
@@ -151,12 +160,12 @@ first && doSomething(first);
 // otherwise, set it to the return
 // value of createBar()
 var bar = baz || createBar();
-
+```
 This style is quite elegant and pleasantly terse; that said, it can be really hard to read,
  especially for beginners. I bring it up here so you'll recognize it in code you read, but 
  I don't recommend using it until you're extremely comfortable with what it means and how 
  you can expect it to behave.
-Comparison Operators
+##Comparison Operators
 
 Comparison operators allow you to test whether values are equivalent or whether values are identical.
 
@@ -166,8 +175,8 @@ Comparison operators allow you to test whether values are equivalent or whether 
 
 ####Lesson 4: Operators Cont..
 
-Comparison operators
-
+##Comparison operators
+```
 var first = 1;
 var bar = 0;
 var baz = '1';
@@ -184,7 +193,7 @@ first === parseInt(baz);   // returns true
 first > bim;    // returns false
 bim > baz;    // returns true
 first <= baz;   // returns true
-
+```
 
 
 
@@ -192,13 +201,13 @@ first <= baz;   // returns true
 
 ####Lesson 5: Conditional Code
 
-Conditional Code
+##Conditional Code
 
 Sometimes you only want to run a block of code under certain conditions. Flow control ” via if 
 and else blocks ” lets you run code only under certain conditions.
 
-Flow control
-
+##Flow control
+```
 var first = true;
 var bar = false;
 
@@ -216,7 +225,7 @@ if (bar) {
         // this code would run if first and bar were both false
     }
 }
-
+```
 Note
 
 While curly braces aren't strictly required around single-line if statements, using them 
@@ -231,22 +240,22 @@ are "truthy" and which kinds of values are "falsy." Sometimes, values that seem 
 evaluate one way actually evaluate another.
 
 Values that evaluate to true
-
+```
 '0';
 'any string';
 [];  // an empty array
 {};  // an empty object
 1;   // any non-zero number
-
+```
 Values that evaluate to false
-
+```
 0;
 '';  // an empty string
 NaN; // JavaScript's "not-a-number" variable
 null;
 undefined;  // be careful -- undefined can be redefined!
-
-Conditional Variable Assignment with The Ternary Operator
+```
+#Conditional Variable Assignment with The Ternary Operator
 
 Sometimes you want to set a variable to a value depending on some condition. You could use 
 an if/else statement, but in many cases the ternary operator is more convenient. 
@@ -254,20 +263,20 @@ an if/else statement, but in many cases the ternary operator is more convenient.
 [Definition: The ternary operator tests a condition; 
 if the condition is true, it returns a certain value, otherwise it returns a different value.]
 
-The ternary operator
-
+##The ternary operator
+```
 // set first to 1 if bar is true;
 // otherwise, set first to 0
 var first = bar ? 1 : 0;
-
+```
 While the ternary operator can be used without assigning the return value to a variable, this is generally discouraged.
-Switch Statements
+#Switch Statements
 
 Rather than using a series of if/else if/else blocks, sometimes it can be useful to use a switch statement instead. 
 [Definition: Switch statements look at the value of a variable or expression, and run different blocks of code depending on the value.]
 
 A switch statement
-
+```
 switch (first) {
 
     case 'bar':
@@ -284,9 +293,10 @@ switch (first) {
 
 }
 
+```
 Switch statements have somewhat fallen out of favor in JavaScript, because often the same behavior
  can be accomplished by creating an object that has more potential for reuse, testing, etc. For example:
-
+```
 var stuffToDo = {
     'bar' : function() {
         alert('the value was bar -- yay!');
@@ -307,7 +317,7 @@ if (stuffToDo[first]) {
     stuffToDo['default']();
 }
 
-
+```
 
 
 
@@ -319,22 +329,22 @@ Loops
 
 Loops let you run a block of code a certain number of times.
 
-Loops
-
+##Loops
+```
 // logs 'try 0', 'try 1', ..., 'try 4'
 for (var i=0; i<5; i++) {
     console.log('try ' + i);
 }
-
+```
 Note that in Loops even though we use the keyword var before the variable name i, this does not
  "scope" the variable i to the loop block. We'll discuss scope in depth later in this chapter.
 The for loop
 
 A for loop is made up of four statements and has the following structure:
-
+```
 for ([initialisation]; [conditional]; [iteration])
  [loopBody]
-
+```
 The initialisation statement is executed only once, before the loop starts. It gives you an 
 opportunity to prepare or declare any variables.
 
@@ -352,24 +362,24 @@ You'll typically have multiple statements that need to be executed and so will w
 Here's a typical for loop:
 
 A typical for loop
-
+```
 for (var i = 0, limit = 100; i < limit; i++) {
     // This block will be executed 100 times
     console.log('Currently at ' + i);
     // Note: the last log will be "Currently at 99"
 }
-
-The while loop
+```
+#The while loop
 
 A while loop is similar to an if statement, except that its body will keep executing until 
 the condition evaluates to false.
-
+```
 while ([conditional]) [loopBody]
-
+```
 Here's a typical while loop:
 
 A typical while loop
-
+```
 var i = 0;
 while (i < 100) {
 
@@ -379,7 +389,7 @@ while (i < 100) {
     i++; // increment i
 
 }
-
+```
 You'll notice that we're having to increment the counter within the loop's body. It is possible 
 to combine the conditional and incrementer, like so:
 
