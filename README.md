@@ -1,7 +1,7 @@
 
 #Beginner:
 
-####Lesson 1: JavaScript Basics
+####Lesson 1: JavaScript Basics - Misunderstood Language of the Era
 ##Overview
 ```
 JavaScript, a rich and expressive language in its own right. 
@@ -591,9 +591,13 @@ You should avoid using these words in your code except when using them with thei
 	
 ####Lesson 9: Arrays
 
+JavaScript Arrays are not real arrays
+
 Arrays are zero-indexed lists of values. They are a handy way to store a set of related items 
 of the same type (such as strings), though in reality, an array can include multiple types of 
 items, including other arrays.
+
+Arrays are also objects which have some special methods inherited from Array.prototype global object
 
 A simple array
 
