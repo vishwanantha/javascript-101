@@ -8,6 +8,7 @@ Before winning this name so famous nowadays, JavaScript was called Mocha. When i
 #Beginner:
 
 ####Lesson 1: JavaScript Basics - Misunderstood Language of the Era
+
 ##Overview
 ```
 JavaScript, a rich and expressive language in its own right. 
@@ -670,6 +671,15 @@ Otherwise, they are called properties.
 As it turns out, nearly everything in JavaScript is an object ” arrays, functions, numbers, 
 even strings ” and they all have properties and methods.
 
+###Creating an object Just like variables, an object needs to be defined first before it can be used.
+
+Defining an empty object
+
+var myObject = new Object();
+var myObject = {};
+
+Both lines are the same, {} is shorthand for new Object()
+
 Creating an "object literal"
 
 var myObject = {
@@ -729,6 +739,16 @@ myDinner["dinnerTime"] = function(){
     //start eating
 }
 
+###Retrieve an item from an object
+
+You can retrieve properties from an object using the same syntax as adding a property.
+
+myDinner.side; // will return "rice"
+myDinner["dessert"]; // will return "ice cream"
+
+###Executing a Method A method is a function, except that it's associated to an object. Calling the method uses the same syntax as calling a function but use dot notation to attach it to a specific object.
+
+myDinner.dinnerTime(); // will run the dinnerTime function
 
 
 
@@ -781,8 +801,19 @@ var greet = function(person, greeting) {
 var greeting = greet('Messi', 'Hello');
 greeting();
 
+###Functions and semicolons
 
+Function declarations are contained in a block denoted by the {} so it does not require a semicolon.
 
+function foo() {
+	//do stuff here
+}
+
+Function expressions require a semicolon because the function is assigned to the variable which makes it a statement. Statements require a semicolon.
+
+var foo = function() {
+	//do stuff here
+};
 
 
 
