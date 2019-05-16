@@ -35,6 +35,23 @@ Whitespace has no meaning outside of quotation marks
 ```
 var first =         'hello world';
 ```
+
+##Types
+
+Values: Every value has a type, which determines the role it plays. There are seven basic types listed below.
+
+Types:
+
+    Numbers - Integers & decimals (e.g. 10, 10.001)
+    Strings - characters including spaces. Must be contained within quotes (e.g. "How are you today?")
+    Booleans - true or false (keyword)
+    Undefined - means "I don't have a value"
+    Null - means "I have a value of nothing" — note that this is similar to (but logically distinct from) Undefined
+    Objects - see below
+    Functions - see below
+
+EPL (read, eval, print, loop): takes the code you give it and returns a result. A JavaScript REPL can be accessed in the browser's Developer tools. (ex. console tab in FireFox/ Chrome's dev tools). You can access this by rightclicking the web browser ( on the web page ) and click Inspect. This will bring the Console , Debugger along with the other tools
+
 ##Expressions 
 Parentheses indicate precedence
 ```
