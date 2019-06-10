@@ -94,5 +94,13 @@ Summary: Get the repo list from the github api and display in the page.
 User validation with your flask api
 Time to complete: About 120 minutes.
 
-Local Storage
+Local Storage:
+
+Store the loggedin user info in Local storage.
 Time to complete: About 60 minutes.
+
+Data Table 
+https://datatables.net/
+
+ListJS
+https://listjs.com/
