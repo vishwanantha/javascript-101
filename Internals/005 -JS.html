@@ -1,0 +1,44 @@
+<html>
+<head>
+<script>
+
+function startGame() {
+
+var a = $("myId");
+console.log(a.innerHTML);
+
+
+a.click(function() {
+  alert( "Handler for .click() called." );
+});
+
+} 
+
+var $ = (function(a){ 
+	var elem={
+	}
+  function myLib(a){ 
+	elem = document.getElementById(a)
+	
+	elem.click = function(fn)
+	{ 
+	console.log("inclick");
+	this.addEventListener("click", fn);
+	}
+	
+    return elem;
+  } 
+  return myLib; 
+})();
+
+
+</script>
+</head>
+<body onload="startGame()">
+
+<br>
+
+<p id="myId">Prototypal Inheritance: A prototype is a working object instance. Objects inherit directly from other objects.</p>
+<p>How long can you stay alive?</p>
+</body>
+</html>

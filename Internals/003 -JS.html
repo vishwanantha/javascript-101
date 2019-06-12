@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+
+function startGame(rel) {
+
+var player1 = new Cricketer("Virat", "Kohli");
+var player2 = new Cricketer("Dhoni", "Mahi");
+//var player3 = Cricketer("Rahul", "Dravid");
+
+
+console.log(player1);
+console.log(player1.firstName);
+console.log(player2);
+console.log(player2.firstName);
+/*
+console.log(player3);
+console.log(player3.firstName);
+*/
+
+Cricketer.prototype.TeamSlogan = "Bleed Blue";
+console.log(player2.TeamSlogan);
+
+console.log(Cricketer.prototype); 
+console.log(player2.prototype); // undefined
+console.log(player2.__proto__); 
+
+console.log(Cricketer.prototype === player1.__proto__ ); // true
+
+} 
+
+function Cricketer(firstName, lastName) {
+	this.firstName = firstName,
+	this.lastName = lastName,
+	this.fullName = function() {
+		return this.firstName + " " + this.lastName;
+	}
+}
+
+
+</script>
+</head>
+<body onload="startGame()">
+
+<br>
+
+<p>This page is for Object play</p>
+<p>How long can you stay alive?</p>
+</body>
+</html>

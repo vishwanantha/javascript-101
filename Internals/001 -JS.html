@@ -1,0 +1,107 @@
+<html>
+<head>
+<script>
+
+function startGame() {
+	
+	/*Things to learn
+	1. Hoisting - Lexical Scope (Scope & Global,Block) - var & let
+	2. Functions
+			Normal
+			Object type
+			Assiging to another 
+	3. Anonymous Functions
+	4. IIFE - Self calling 
+	5. Closures & returning function
+	*/
+	
+	//Hositing variable not values
+	console.log(Dothis);
+	var Dothis = "Smoke your weed";
+	
+	/*
+	var Dothis;
+	console.log(Dothis);
+	Dothis = "Smoke your weed";
+
+	*/
+	//console.log(Dothis2);
+	//let Dothis2 = "Have a drink";
+
+	
+   MoveLevel2();
+   Shoot();
+	
+	(function(){console.log("I am self Proclaimed King ");}());
+	
+	!function(){console.log("I am True Proclaimed King ");}();
+	
+	kata();
+	kata(" Welcome to" , " GUVI Code War");
+
+	ninja();
+	//ninja.myNinja();
+	//myNinja();
+	samurai.myNinja();
+
+	 
+   myGameArea.start();
+   
+   aa = OutterNinja();
+   aa();
+	MoveLevel3("GUVI");
+//   myGameArea.clear();
+} 
+
+//Hoisting myself
+var kata = function (myparm1,myparm2){ 
+  console.log("I am a DarkMan  and My name is Kata now...I am hosited to top "+ myparm1 + myparm2);
+};
+
+var ninja = function myNinja(){ 
+  console.log("My name is ninja Not myNinja");
+}; 
+
+var samurai = { myNinja: ninja }; 
+//var ninja = null; 
+
+var myGameArea = {
+    myvar : "canvas",
+    start : function() {
+        console.log("hello - Start");
+		
+		clear();
+        },
+    clear : function() {
+        console.log("Bye - Clear"+ myvar);    }
+}
+
+var MoveLevel2 = function(){ console.log("Move to Level2");return true; };
+ 
+window.Shoot = function(x){ console.log(x+"Kill him");return true; }; 
+
+
+MoveLevel3 = (x) => { console.log(x+ " Moved to level3"); };
+
+function OutterNinja() {  
+   var Power = 'Nija Stars';
+   //console.log(Local_Power);
+   return function InnerSamurai() {
+	  var Local_Power = 'Local Dark powers';
+      console.log(Power);
+	  //https://javascript.info/garbage-collection
+   }
+
+}
+
+
+</script>
+</head>
+<body onload="startGame()">
+
+<br>
+
+<p>How long can you stay alive?</p>
+<p>This is for Functions & Hoisting</p>
+</body>
+</html>

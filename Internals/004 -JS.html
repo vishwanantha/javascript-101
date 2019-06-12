@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+
+function startGame() {
+
+var a = $("myId");
+console.log(a.innerHTML);
+} 
+
+var $ = (function(a){ 
+
+  function myLib(a){ 
+    return document.getElementById(a);
+  } 
+  return myLib; 
+})();
+
+
+</script>
+</head>
+<body onload="startGame()">
+
+<br>
+
+<p id="myId">This page is for writing your own JQuery Library</p>
+<p>How long can you stay alive?</p>
+</body>
+</html>

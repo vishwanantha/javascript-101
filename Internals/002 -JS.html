@@ -1,0 +1,72 @@
+<html>
+<head>
+<script>
+
+function startGame(rel) {
+console.log("Game started");
+
+for(a=0;a<5;a++)
+{
+console.log("Shooting Bullet "+ a);
+}
+console.log("reload needed");
+
+rel();
+
+
+
+
+
+
+var url="https://corsproxy.github.io/";
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        console.log(xhr.responseText);
+    }
+}
+xhr.open('GET', url, true);
+xhr.send(null);
+
+
+
+setTimeout(BdayWish, 5000);
+
+} 
+
+function relaodWP1()
+{
+console.log("reload needed");
+}
+function relaodWP2()
+{
+console.log("reload needed");
+}
+
+function relaodWP2()
+{
+console.log("reload Weapon2 needed");
+}
+
+
+function reqListener () {
+  console.log(this.responseText);
+}
+
+function BdayWish() {
+  alert('Happy Bday my dear learners...F*** off');
+}
+
+
+
+</script>
+</head>
+<body onload="startGame(relaodWP2)">
+
+<br>
+
+<p>Use the ACCELERATE button to stay in the air</p>
+<p>How long can you stay alive?</p>
+</body>
+</html>
