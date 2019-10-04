@@ -85,17 +85,25 @@ var first =         'hello world';
 
 There are three kinds of variable declarations in JavaScript.
 
+
 var
+
     Declares a variable, optionally initializing it to a value.
+    
     For example, var x = 42. This syntax can be used to declare both local and global variables, depending on the execution context.
     
 let
+
     Declares a block-scoped, local variable, optionally initializing it to a value.
+    
     let y = 13. This syntax can be used to declare a block-scope local variable.
     
 const
+
     Declares a block-scoped, read-only named constant.
+    
     const PI = 3.14;
+    
 
 ##### You can also simply assign a value to a variable For example, x = 42. This form creates an undeclared global variable.
 
