@@ -147,6 +147,10 @@ Parentheses indicate precedence
 ```
 2 * 3 + 5;    // returns 11; multiplication happens first
 2 * (3 + 5);  // returns 16; addition happens first
+
+'37' - 7 // 30
+'37' + 7 // "377"
+
 ```
 Tabs enhance readability, but have no special meaning
 ```
@@ -175,6 +179,9 @@ if (input === undefined) {
   console.log("I Wont get executed");
 }
 
+var fish = ['Lion', , 'Angel'];
+fish[1] is undefined
+
 ```
 The undefined value behaves as false when used in a boolean context. 
 The undefined value converts to NaN when used in numeric context.
@@ -187,8 +194,9 @@ a + 2;  // Evaluates to NaN
 var n = null;
 console.log(n * 32); // Will log 0 to the console
 
+//RegExp literals
 
-
+var re = /ab+c/;
 
 
 var singleLineStatement = "hello"; //needs semi-colon
