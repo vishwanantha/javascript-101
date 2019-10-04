@@ -40,11 +40,38 @@ If you're interested in learning more about the JavaScript language, I highly re
 JavaScript: The Good Parts by Douglas Crockford.
 ```
 
+Hello world
+
+To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
+
+(function(){
+  "use strict";
+  /* Start of your code */
+  function greetMe(yourName) {
+    alert('Hello ' + yourName);
+  }
+  
+  greetMe('World');
+  /* End of your code */
+})();
+
+Remember to always include the (function(){"use strict"; before your code, and add })(); to the end of your code. You will learn what these mean, but for now they can be thought of as doing the following —
+
+1.  Massively improve performance
+
+2.  Prevent stupid semantics in JavaScript that trip up beginners
+
+3.  Prevent code snippets executed in the console from interacting with one-another (e.g. having something created in one console execution being used for a different console execution).
+
 ## Syntax Basics
 
 Understanding statements, variable naming, whitespace, and other basic JavaScript syntax.
 
 A simple variable declaration
+
+JavaScript is case-sensitive and uses the Unicode character set
+
+var First is not same as var first.
 
 ```
 var first = 'hello world';
@@ -54,6 +81,39 @@ Whitespace has no meaning outside of quotation marks
 var first =         'hello world';
 ```
 
+
+There are three kinds of variable declarations in JavaScript.
+
+var
+    Declares a variable, optionally initializing it to a value.
+     For example, var x = 42. This syntax can be used to declare both local and global variables, depending on the execution context.
+     
+let
+    Declares a block-scoped, local variable, optionally initializing it to a value.
+    let y = 13. This syntax can be used to declare a block-scope local variable.
+const
+    Declares a block-scoped, read-only named constant. 
+
+#####You can also simply assign a value to a variable For example, x = 42. This form creates an undeclared global variable.
+
+ `
+var a;
+console.log('The value of a is ' + a); // The value of a is undefined
+
+console.log('The value of b is ' + b); // The value of b is undefined
+var b;
+// This one may puzzle you until you read **'Variable hoisting'** below
+
+console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined
+
+let x;
+console.log('The value of x is ' + x); // The value of x is undefined
+
+console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
+let y;
+
+ `
+ 
 ## Types
 
 Values: Every value has a type, which determines the role it plays. There are seven basic types listed below.
