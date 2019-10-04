@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<!-- Exercise 1 -->
+<!-- Exercise 4 -->
 <html>
     <head>
         <meta charset=utf-8 />
-        <title>JS DOM paragraph style</title>
     </head>
     <body>
-        <p id='text'>JavaScript Exercises - w3resource</p>
-        <div>
-            <button id="jsstyle" onclick="js_style()">Style</button>
-        </div>
+        <p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p>
+        <button onclick="getAttributes()">Click here to get attributes value</button>
         <ul>
             <li><a href="01index.html">Go to question #1</a></li>
             <li><a href="02index.html">Go to question #2</a></li>
@@ -26,15 +23,15 @@
             <li><a href="13index.html">Go to question #13</a></li>
         </ul>
         <script>
-            var btn = document.getElementById('jsstyle');
-            btn.addEventListener('click', changeText);
-
-            function changeText(){
-                console.log('tis here?');
-                var paragraph = document.getElementsByTagName('p')[0];
-                paragraph.style.color = "seagreen";
-                paragraph.style.fontSize = '30px';
-                paragraph.style.fontFamily = "Arial";
+            function getAttributes(){
+                var w3resource = document.querySelector('p > a');
+                var attributes = new Object();
+                attributes.href = w3resource.getAttribute('href');
+                attributes.hreflang = w3resource.getAttribute('hreflang');
+                attributes.rel = w3resource.getAttribute('rel');
+                attributes.target = w3resource.getAttribute('target');
+                attributes.type = w3resource.getAttribute('type');
+                console.log(attributes);
             }
         </script>
     </body>

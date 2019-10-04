@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<!-- Exercise 1 -->
+<!-- Exercise 8 -->
 <html>
     <head>
         <meta charset=utf-8 />
-        <title>JS DOM paragraph style</title>
+        <title>Remove items from a dropdown list</title>
     </head>
     <body>
-        <p id='text'>JavaScript Exercises - w3resource</p>
-        <div>
-            <button id="jsstyle" onclick="js_style()">Style</button>
-        </div>
+        <form>
+            <select id="colorSelect">
+                <option>Red</option>
+                <option>Green</option>
+                <option>White</option>
+                <option>Black</option>
+            </select>
+            <input type="button" onclick="removecolor()" value="Select and Remove">
+        </form>
         <ul>
             <li><a href="01index.html">Go to question #1</a></li>
             <li><a href="02index.html">Go to question #2</a></li>
@@ -26,15 +31,8 @@
             <li><a href="13index.html">Go to question #13</a></li>
         </ul>
         <script>
-            var btn = document.getElementById('jsstyle');
-            btn.addEventListener('click', changeText);
-
-            function changeText(){
-                console.log('tis here?');
-                var paragraph = document.getElementsByTagName('p')[0];
-                paragraph.style.color = "seagreen";
-                paragraph.style.fontSize = '30px';
-                paragraph.style.fontFamily = "Arial";
+            function removecolor(){
+                document.forms[0].children[0].options[document.forms[0].children[0].selectedIndex].remove();
             }
         </script>
     </body>

@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<!-- Exercise 1 -->
+<!-- Exercise 13 -->
 <html>
     <head>
-        <meta charset=utf-8 />
-        <title>JS DOM paragraph style</title>
+        <title>Get width and height of window on resize</title>
     </head>
     <body>
-        <p id='text'>JavaScript Exercises - w3resource</p>
-        <div>
-            <button id="jsstyle" onclick="js_style()">Style</button>
-        </div>
+        <div id="my-div">Resize Window to Measure!</div>
         <ul>
             <li><a href="01index.html">Go to question #1</a></li>
             <li><a href="02index.html">Go to question #2</a></li>
@@ -26,15 +22,12 @@
             <li><a href="13index.html">Go to question #13</a></li>
         </ul>
         <script>
-            var btn = document.getElementById('jsstyle');
-            btn.addEventListener('click', changeText);
-
-            function changeText(){
-                console.log('tis here?');
-                var paragraph = document.getElementsByTagName('p')[0];
-                paragraph.style.color = "seagreen";
-                paragraph.style.fontSize = '30px';
-                paragraph.style.fontFamily = "Arial";
+            window.addEventListener("resize", printSize);
+            function printSize(){
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+                var my_div = document.getElementById('my-div');
+                my_div.innerHTML = 'Height: ' + height + ' Width: ' + width;
             }
         </script>
     </body>
