@@ -4,6 +4,20 @@ Created by Netscape in 1995 as an extension of HTML for Netscape Navigator 2.0.
 JavaScript had as its main function the manipulation of HTML documents and form validation. 
 Before winning this name so famous nowadays, JavaScript was called Mocha. When it first shipped in beta releases, it was officially called LiveScript and finally, when it was released by Sun Microsystems, was baptized with the name by which it is known today. Because of the similar names, people confuse JavaScript with Java. Although both have the lexical structure of programming, they are not the same language. Different from C, C# and Java, JavaScript is an interpreted language. It means that it needs an "interpreter". In case of JavaScript, the interpreter is the browser. 
 
+JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g. having complex animations, clickable buttons, popup menus, etc.).  There are also more advanced server side versions of JavaScript such as Node.Js which allow you to add more functionality to a website than simply downloading files (such as realtime collaboration between multiple computers). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
+
+
+#JavaScript !== Java
+
+JavaScript and Java looks similar in some ways but fundamentally different in some others.
+
+#JavaScript and the ECMAScript specification
+JavaScript is standardized at Ecma International — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript.
+
+
+#Getting started with JavaScript
+      All you need is WebBrowser
+ 
 
 #Beginner:
 
