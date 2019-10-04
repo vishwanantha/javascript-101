@@ -611,6 +611,15 @@ for (var i = 0, limit = 100; i < limit; i++) {
     // Note: the last log will be "Currently at 99"
 }
 ```
+
+
+
+    * for (let i = 0; i < arr.length; ++i)
+    * arr.forEach((v, i) => { /* ... */ })
+    * for (let i in arr)
+    * for (const v of arr)
+
+
 #The while loop
 
 A while loop is similar to an if statement, except that its body will keep executing until 
@@ -636,13 +645,13 @@ You'll notice that we're having to increment the counter within the loop's body.
 to combine the conditional and incrementer, like so:
 
 A while loop with a combined conditional and incrementer
-
+```
 var i = -1;
 while (++i < 100) {
     // This block will be executed 100 times
     console.log('Currently at ' + i);
 }
-
+```
 Notice that we're starting at -1 and using the prefix incrementer (++i).
 The do-while loop
 
@@ -654,7 +663,7 @@ do [loopBody] while ([conditional])
 Here's a do-while loop:
 
 A do-while loop
-
+```
 do {
 
     // Even though the condition evaluates to false
@@ -663,13 +672,23 @@ do {
     alert('Hi there!');
 
 } while (false);
-
+```
 These types of loops are quite rare since only few situations require a loop that blindly 
 executes at least once. Regardless, it's good to be aware of it.
 
+```
 
+const arr = [3, 5, 7];
+arr.foo = 'hello';
 
+for (let i in arr) {
+   console.log(i); // logs "0", "1", "2", "foo"
+}
 
+for (let i of arr) {
+   console.log(i); // logs 3, 5, 7
+}
+```
 
 
 ####Lesson 7: Breaking and continuing
