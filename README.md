@@ -18,6 +18,7 @@ JavaScript is standardized at Ecma International — the European association fo
 #Getting started with JavaScript
       All you need is WebBrowser
  
+![alt text](https://github.com/reach2arunprakash/javascript-101/blob/master/FirefoxWebconsole.png)
 
 #Beginner:
 
