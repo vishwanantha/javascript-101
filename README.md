@@ -87,13 +87,15 @@ There are three kinds of variable declarations in JavaScript.
 
 var
     Declares a variable, optionally initializing it to a value.
-     For example, var x = 42. This syntax can be used to declare both local and global variables, depending on the execution context.
-     
+    For example, var x = 42. This syntax can be used to declare both local and global variables, depending on the execution context.
+    
 let
     Declares a block-scoped, local variable, optionally initializing it to a value.
     let y = 13. This syntax can be used to declare a block-scope local variable.
+    
 const
-    Declares a block-scoped, read-only named constant. 
+    Declares a block-scoped, read-only named constant.
+    const PI = 3.14;
 
 ##### You can also simply assign a value to a variable For example, x = 42. This form creates an undeclared global variable.
 
@@ -155,13 +157,30 @@ instructions for the computer to execute.
 are longer than a 
 single line. */
 
+```
 
+```
 var input;
 if (input === undefined) {
  console.log("I am undefined");
 } else {
   console.log("I Wont get executed");
 }
+
+```
+The undefined value behaves as false when used in a boolean context. 
+The undefined value converts to NaN when used in numeric context.
+null value behaves as 0 in numeric contexts and as false in boolean contexts.
+ 
+```
+var a;
+a + 2;  // Evaluates to NaN
+
+var n = null;
+console.log(n * 32); // Will log 0 to the console
+
+
+
 
 
 var singleLineStatement = "hello"; //needs semi-colon
@@ -174,6 +193,49 @@ if (condition === "something"){
 } //does not need semi-colon
 
 ```
+
+### Variable hoisting
+
+Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception. This concept is known as hoisting;
+
+variables in JavaScript are in a sense **"hoisted" or lifted to the top of the function or statement**. 
+
+However, variables that are hoisted return a value of undefined. So even if you declare and initialize after you use or refer to this variable, it still returns undefined
+
+
+```
+console.log(x === undefined); // true
+var x = 3;
+
+console.log(y); // ReferenceError
+let y = 3;
+
+```
+
+### Function hoisting
+
+
+```
+
+/* Function declaration */
+
+foo(); // "bar"
+
+function foo() {
+  console.log('bar');
+}
+
+
+/* Function expression */
+
+baz(); // TypeError: baz is not a function
+
+var baz = function() {
+  console.log('bar2');
+};
+```
+
+
 #### Lesson 1.a: Running In web page
 ### Getting started
 
