@@ -124,6 +124,22 @@ console.log('The value of x is ' + x); // The value of x is undefined
 console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
 let y;
 
+
+Recap:
+
+var a;                          // variable
+var b = "init";                 // string
+var c = "Hi" + " " + "Joe";     // = "Hi Joe"
+var d = 1 + 2 + "3";            // = "33"
+var e = [2,3,5,8];              // array
+var f = false;                  // boolean
+var g = /()/;                   // RegEx
+var h = function(){};           // function object
+const PI = 3.14;                // constant
+var a = 1, b = 2, c = a + b;    // one line
+let z = 'zzz';                  // block scope local variable
+
+
  ```
  
 ## Types
@@ -140,6 +156,13 @@ Types:
     Objects - see below
     Functions - see below
 
+Recap:
+false, true                     // boolean
+18, 3.14, 0b10011, 0xF6, NaN    // number
+"flower", 'John'                // string
+undefined, null , Infinity      // special
+
+
 EPL (read, eval, print, loop): takes the code you give it and returns a result. A JavaScript REPL can be accessed in the browser's Developer tools. (ex. console tab in FireFox/ Chrome's dev tools). You can access this by rightclicking the web browser ( on the web page ) and click Inspect. This will bring the Console , Debugger along with the other tools
 
 ##Expressions 
@@ -150,6 +173,33 @@ Parentheses indicate precedence
 
 '37' - 7 // 30
 '37' + 7 // "377"
+
+Recap:
+a * (b + c)         // grouping
+person.age          // member
+person[age]         // member
+!(a == b)           // logical not
+a != b              // not equal
+typeof a            // type (number, object, function...)
+x << 2  x >> 3      // minary shifting
+a = b               // assignment
+a == b              // equals
+a != b              // unequal
+a === b             // strict equal
+a !== b             // strict unequal
+a < b   a > b       // less and greater than
+a <= b  a >= b      // less or equal, greater or eq
+a += b              // a = a + b (works with - * %...)
+a && b              // logical and
+a || b              // logical or
+
+& 	AND  	 5 & 1 (0101 & 0001)	1 (1)
+| 	OR  	 5 | 1 (0101 | 0001)	5 (101)
+~ 	NOT  	 ~ 5 (~0101)	10 (1010)
+^ 	XOR  	 5 ^ 1 (0101 ^ 0001)	4 (100)
+<< 	left shift  	 5 << 1 (0101 << 1)	10 (1010)
+>> 	right shift  	 5 >> 1 (0101 >> 1)	2 (10)
+>>> 	zero fill right shift  	 5 >>> 1 (0101 >>> 1)	2 (10)
 
 ```
 Tabs enhance readability, but have no special meaning
@@ -360,9 +410,71 @@ Forcing a string to act as a number (using the unary-plus operator)
 ```
 #console.log(first + +bar);
 ```
+#### String and Math Functions
+```
+var abc = "abcdefghijklmnopqrstuvwxyz";
+var esc = 'I don\'t \n know';   // \n new line
+var len = abc.length;           // string length
+abc.indexOf("lmno");            // find substring, -1 if doesn't contain 
+abc.lastIndexOf("lmno");        // last occurance
+abc.slice(3, 6);                // cuts out "def", negative values count from behind
+abc.replace("abc","123");       // find and replace, takes regular expressions
+abc.toUpperCase();              // convert to upper case
+abc.toLowerCase();              // convert to lower case
+abc.concat(" ", str2);          // abc + " " + str2
+abc.charAt(2);                  // character at index: "c"
+abc[2];                         // unsafe, abc[2] = "C" doesn't work
+abc.charCodeAt(2);              // character code at index: "c" -> 99
+abc.split(",");                 // splitting a string on commas gives an array
+abc.split("");                  // splitting on characters
+128.toString(16);               // number to hex(16), octal (8) or binary (2)
+
+var pi = Math.PI;       // 3.141592653589793
+Math.round(4.4);        // = 4 - rounded
+Math.round(4.5);        // = 5
+Math.pow(2,8);          // = 256 - 2 to the power of 8
+Math.sqrt(49);          // = 7 - square root 
+Math.abs(-3.14);        // = 3.14 - absolute, positive value
+Math.ceil(3.14);        // = 4 - rounded up
+Math.floor(3.99);       // = 3 - rounded down
+Math.sin(0);            // = 0 - sine
+Math.cos(Math.PI);      // OTHERS: tan,atan,asin,acos,
+Math.min(0, 3, -2, 2);  // = -2 - the lowest value
+Math.max(0, 3, -2, 2);  // = 3 - the highest value
+Math.log(1);            // = 0 natural logarithm 
+Math.exp(1);            // = 2.7182pow(E,x)
+Math.random();          // random number between 0 and 1
+Math.floor(Math.random() * 5) + 1;  // random integer, from 1 to 5
+
+var pi = 3.141;
+pi.toFixed(0);          // returns 3
+pi.toFixed(2);          // returns 3.14 - for working with money
+pi.toPrecision(2)       // returns 3.1
+pi.valueOf();           // returns number
+Number(true);           // converts to number
+Number(new Date())      // number of milliseconds since 1970
+parseInt("3 months");   // returns the first number: 3
+parseFloat("3.5 days"); // returns 3.5
+Number.MAX_VALUE        // largest possible JS number
+Number.MIN_VALUE        // smallest possible JS number
+Number.NEGATIVE_INFINITY// -Infinity
+Number.POSITIVE_INFINITY// Infinity
+
+eval();                     // executes a string as if it was script code
+String(23);                 // return string from number
+(23).toString();            // return string from number
+Number("23");               // return number from string
+decodeURI(enc);             // decode URI. Result: "my page.asp"
+encodeURI(uri);             // encode URI. Result: "my%page.asp"
+decodeURIComponent(enc);    // decode a URI component
+encodeURIComponent(uri);    // encode a URI component
+isFinite();                 // is variable a finite, legal number
+isNaN();                    // is variable an illegal number
+parseFloat();               // returns floating point number of string
+parseInt();                 // parses a string and returns an integer
 
 
-
+```
 
 ####Lesson 3: Operators Cont..
 
@@ -841,6 +953,34 @@ var myString = myArray.join('');   // 'hello'
 var mySplit = myString.split('');  // [ 'h', 'e', 'l', 'l', 'o' ]
 
 
+
+var dogs = ["Bulldog", "Beagle", "Labrador"]; 
+var dogs = new Array("Bulldog", "Beagle", "Labrador");  // declaration
+
+alert(dogs[1]);             // access value at index, first item being [0]
+dogs[0] = "Bull Terier";    // change the first item
+
+for (var i = 0; i < dogs.length; i++) {     // parsing with array.length
+    console.log(dogs[i]);
+}
+
+dogs.toString();                        // convert to string: results "Bulldog,Beagle,Labrador"
+dogs.join(" * ");                       // join: "Bulldog * Beagle * Labrador"
+dogs.pop();                             // remove last element
+dogs.push("Chihuahua");                 // add new element to the end
+dogs[dogs.length] = "Chihuahua";        // the same as push
+dogs.shift();                           // remove first element
+dogs.unshift("Chihuahua");              // add new element to the beginning
+delete dogs[0];                         // change element to undefined (not recommended)
+dogs.splice(2, 0, "Pug", "Boxer");      // add elements (where, how many to remove, element list)
+var animals = dogs.concat(cats,birds);  // join two arrays (dogs followed by cats and birds)
+dogs.slice(1,4);                        // elements from [1] to [4-1]
+dogs.sort();                            // sort string alphabetically
+dogs.reverse();                         // sort string in descending order
+x.sort(function(a, b){return a - b});   // numeric sort
+x.sort(function(a, b){return b - a});   // numeric descending sort
+highest = x[0];                         // first item in sorted array is the lowest (or highest) value
+x.sort(function(a, b){return 0.5 - Math.random()});     // random order sort
 
 
 
