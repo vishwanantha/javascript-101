@@ -1,5 +1,5 @@
 
-Created by Netscape in 1995 as an extension of HTML for Netscape Navigator 2.0.
+# Created by Netscape in 1995 as an extension of HTML for Netscape Navigator 2.0.
 
 JavaScript had as its main function the manipulation of HTML documents and form validation. 
 Before winning this name so famous nowadays, JavaScript was called Mocha. When it first shipped in beta releases, it was officially called LiveScript and finally, when it was released by Sun Microsystems, was baptized with the name by which it is known today. Because of the similar names, people confuse JavaScript with Java. Although both have the lexical structure of programming, they are not the same language. Different from C, C# and Java, JavaScript is an interpreted language. It means that it needs an "interpreter". In case of JavaScript, the interpreter is the browser. 
@@ -7,24 +7,26 @@ Before winning this name so famous nowadays, JavaScript was called Mocha. When i
 JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g. having complex animations, clickable buttons, popup menus, etc.).  There are also more advanced server side versions of JavaScript such as Node.Js which allow you to add more functionality to a website than simply downloading files (such as realtime collaboration between multiple computers). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
 
 
-#JavaScript !== Java
+#### JavaScript !== Java
 
 JavaScript and Java looks similar in some ways but fundamentally different in some others.
 
-#JavaScript and the ECMAScript specification
+#### JavaScript and the ECMAScript specification
 JavaScript is standardized at Ecma International — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript.
 
 
-#Getting started with JavaScript
+### Getting started with JavaScript
       All you need is WebBrowser
+ 
+ To open the Web Console (Ctrl+Shift+I on Windows and Linux or Cmd-Option-K on Mac), select "Web Console" from the "Developer" menu, which is under the "Tools" menu in Firefox.
  
 ![alt text](https://github.com/reach2arunprakash/javascript-101/blob/master/FirefoxWebconsole.png)
 
-#Beginner:
+# Beginner:
 
-####Lesson 1: JavaScript Basics - Misunderstood Language of the Era
+#### Lesson 1: JavaScript Basics - Misunderstood Language of the Era
 
-##Overview
+### Overview
 ```
 JavaScript, a rich and expressive language in its own right. 
 ```
@@ -38,7 +40,7 @@ If you're interested in learning more about the JavaScript language, I highly re
 JavaScript: The Good Parts by Douglas Crockford.
 ```
 
-##Syntax Basics
+## Syntax Basics
 
 Understanding statements, variable naming, whitespace, and other basic JavaScript syntax.
 
@@ -52,7 +54,7 @@ Whitespace has no meaning outside of quotation marks
 var first =         'hello world';
 ```
 
-##Types
+## Types
 
 Values: Every value has a type, which determines the role it plays. There are seven basic types listed below.
 
@@ -102,8 +104,8 @@ if (condition === "something"){
 } //does not need semi-colon
 
 ```
-####Lesson 1.a: Running In web page
-###Getting started
+#### Lesson 1.a: Running In web page
+### Getting started
 
 ```
 <!DOCTYPE html>
@@ -123,13 +125,13 @@ first();
 </body>
 </html>
 
-####Lesson 1.b: Firebug
-###Getting started
+#### Lesson 1.b: Firebug
+### Getting started
 Firebug is a free and open-source web browser extension for Mozilla Firefox that facilitates the live debugging, editing, and monitoring of any website's CSS, HTML, DOM, XHR, and JavaScript.
 
 ===================================
 
-#save the below code in somesample.js
+##### save the below code in somesample.js
 
 var first = function() {
     console.log('hello');
@@ -156,12 +158,12 @@ first();
 
 ```
 
-####Lesson 2: Operators
-###Basic Operators
+#### Lesson 2: Operators
+### Basic Operators
 
 Basic operators allow you to manipulate values.
 
-##Concatenation
+## Concatenation
 
 ```
 var first = 'hello';
@@ -170,7 +172,7 @@ var bar = 'world';
 console.log(first + ' ' + bar); // 'hello world'
 ```
 
-##Multiplication and division
+## Multiplication and division
 
 ```
 2 * 3;
