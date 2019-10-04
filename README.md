@@ -94,9 +94,10 @@ let
 const
     Declares a block-scoped, read-only named constant. 
 
-#####You can also simply assign a value to a variable For example, x = 42. This form creates an undeclared global variable.
+##### You can also simply assign a value to a variable For example, x = 42. This form creates an undeclared global variable.
 
- `
+ ```
+ 
 var a;
 console.log('The value of a is ' + a); // The value of a is undefined
 
@@ -112,7 +113,7 @@ console.log('The value of x is ' + x); // The value of x is undefined
 console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
 let y;
 
- `
+ ```
  
 ## Types
 
