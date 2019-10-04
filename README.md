@@ -14,6 +14,7 @@ JavaScript and Java looks similar in some ways but fundamentally different in so
 #### JavaScript and the ECMAScript specification
 JavaScript is standardized at Ecma International — the European association for standardizing information and communication systems (ECMA was formerly an acronym for the European Computer Manufacturers Association) to deliver a standardized, international programming language based on JavaScript.
 
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/CrnyA1FRHQ0/0.jpg)](http://www.youtube.com/watch?v=CrnyA1FRHQ0)
 
 ### Getting started with JavaScript
       All you need is WebBrowser
