@@ -156,6 +156,14 @@ are longer than a
 single line. */
 
 
+var input;
+if (input === undefined) {
+ console.log("I am undefined");
+} else {
+  console.log("I Wont get executed");
+}
+
+
 var singleLineStatement = "hello"; //needs semi-colon
 
 if (condition === "something"){
