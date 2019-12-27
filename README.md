@@ -1747,6 +1747,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event
 
 Sample:
 
+```
 
 <!DOCTYPE html>
 <html>
@@ -1790,4 +1791,4 @@ mydiv.onclick = log1;
 
 </body>
 </html>
-
+```
