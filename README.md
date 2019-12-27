@@ -1706,3 +1706,88 @@ a peer for review or help. They can then make further changes saving anew if req
 
 
 https://www.youtube.com/watch?v=PBkzW9mNGrQ&list=PLXmT1r4krsTooRDWOrIu23P3SEZ3luIUq&index=6
+
+
+
+####Lesson 15: JavaScript Events:
+
+The Web platform provides several ways to be notified of DOM events. 
+
+Two common approaches are 
+
+1 .addEventListener() and 
+2.The specific onevent handlers . The HTMLElement.click() method simulates a mouse click on an element
+
+
+Registering onevent handlers
+
+The onevent handlers are properties on certain DOM elements to manage how that element reacts to events. Elements can be interactive (links, buttons, images, forms, and so forth) or non-interactive (such as the base <body> element). Events are actions like:
+
+    Being clicked
+    Detecting pressed keys
+    Getting focus
+
+The on-event handler is usually named with the event it reacts to, like onclick, onkeypress, onfocus, etc.
+
+You can specify an on<…> event handler for a particular event (such as click) for a given object in different ways:
+
+    Adding an HTML attribute named on<eventtype>:
+    <button onclick="handleClick()">,
+    Or by setting the corresponding property from JavaScript:
+    document.querySelector("button").onclick = function(event) { … }.
+
+
+Best 3 Sources to read: 
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Event_handlers
+https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event
+
+
+
+
+Sample:
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<image src="hello.png" onclick="alert('Hi')"</image>
+
+<p>Demonstrating quirks of <code>on<em>event</em></code> HTML attributes on
+   <a onclick="log()">these three words</a>.
+</p>
+
+<button>Click</button>
+<div> Something in this div - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events</div>
+
+
+<h2>https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick#Examples </h2>
+<script>
+function log() {
+  alert('Hi i am invoked')
+}
+
+function log1() {
+  alert('Hi i have overridden you')
+}
+
+
+const button = document.querySelector('button');
+
+button.addEventListener('onclick',log);
+button.addEventListener('onclick', log1);
+
+
+const mydiv = document.querySelector('div');
+
+mydiv.onclick = log;
+
+mydiv.onclick = log1;
+//onmouseover can be replaced for click.
+
+</script>
+
+</body>
+</html>
+
