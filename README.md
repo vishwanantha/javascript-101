@@ -28,6 +28,29 @@ JavaScript is standardized at Ecma International — the European association fo
 #### Lesson 1: JavaScript Basics - Misunderstood Language of the Era
 
 ### Overview
+
+```
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>Before the script...</p>
+
+  <script>
+    var sp = 10;
+    var eb = 20;
+     console.log(a+b);
+    alert( 'Hello, world!' );
+  </script>
+
+  <p>...After the script.</p>
+
+</body>
+
+</html>
+```
+
 ```
 JavaScript, a rich and expressive language in its own right. 
 ```
