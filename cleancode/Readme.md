@@ -13,7 +13,7 @@
 9. [Error Handling](#error-handling)
 10. [Formatting](#formatting)
 11. [Comments](#comments)
-12. [Translation](#translation)
+
 
 ## Introduction
 
