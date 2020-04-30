@@ -1,5 +1,12 @@
 # clean-code-javascript
 
+
+First of all, what does clean coding mean?
+
+Clean coding means that in the first place you write code for your later self and for your co-workers and not for the machine.
+
+Your code must be easily understandable for humans.
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -47,6 +54,10 @@ improvement. Beat up the code instead!
 
 ### Use meaningful and pronounceable variable names
 
+Use intention-revealing names and don't worry if you have long variable names instead of saving a few keyboard strokes.
+
+If you follow this practice, your names become searchable, which helps a lot when you do refactors or you are just looking for something.
+
 **Bad:**
 
 ```javascript
@@ -62,6 +73,40 @@ const currentDate = moment().format("YYYY/MM/DD");
 **[⬆ back to top](#table-of-contents)**
 
 ### Use the same vocabulary for the same type of variable
+
+How should I write my functions?
+
+Your functions should do one thing only on one level of abstraction.
+
+    Functions should do one thing. They should do it well. They should do it only. — Robert C. Martin (Uncle Bob)
+
+How Should I name my fucntions?
+
+A function name should be a verb or a verb phrase, and it needs to communicate its intent, as well as the order and intent of the arguments.
+
+A long descriptive name is way better than a short, enigmatic name or a long descriptive comment.
+
+How many Arguments should i pass to functions?
+
+Avoid long argument list
+
+Use a single object parameter and destructuring assignment instead. It also makes handling optional parameters much easier.
+
+How the function behave?
+
+Reduce side effects
+
+Use pure functions without side effects, whenever you can. They are really easy to use and test.
+
+How big/lengthy my functions can be?
+
+Rule of 30
+
+Steve McConnell says that the theoretical best maximum limit for a method or function is the number of lines that can fit on one screen (i.e., that a developer can see at one time)
+
+Smaller must be better
+
+Methods should not have more than an average of 30 code lines (not counting line spaces and comments)
 
 **Bad:**
 
