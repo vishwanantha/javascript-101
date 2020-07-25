@@ -7,6 +7,7 @@ fs.readFile('./file.txt', 'utf-8', (err, data) => {
 });
 
 console.log(arun.add2(5));
-console.log(arun.newvar); // fix this
+console.log(arun.myvar); // fix this
+console.dir(arun);
 
 
